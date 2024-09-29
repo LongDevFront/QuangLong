@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Tình Yêu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #fff3e0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            transition: transform 0.3s;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #079aef;
+            margin: 0 auto;
+            transition: transform 0.3s;
+        }
+        .profile-img img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s;
+        }
+        h1 {
+            color: #079aef;
+            font-size: 28px;
+            margin: 10px 0;
+            transition: color 0.3s;
+        }
+        .info-box {
+            background-color: 000;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0; /* Start hidden */
+            transform: translateY(20px); /* Start off screen */
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        .info-title {
+            color: #079aef;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .education-title {
+            color: #079aef;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .social-box {
+            background-color: #fff3e0;
+            padding: 10px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            transition: transform 0.3s;
+        }
+        .social-icon {
+            font-size: 30px;
+            color: #079aef;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="cvContainer">
+        <div class="header">
+            <div class="profile-img">
+                <img src="avt.jpg" alt="Ảnh đại diện">
+            </div>
+            <h1>LÊ QUANG LONG</h1>
+            <p>Một chút thông tin về mình !!!</p>
+        </div>
+
+        <div class="info-box" id="about" onclick="toggleInfo('about')">
+            <h2 class="info-title">Về mình</h2>
+            <p>Mình là người nội tâm, nhưng phóng khoáng và dễ chịu, mình hơi nóng tính, nhưng mình không bao giờ cọc cằn khó chịu với phụ nữ và trẻ em, mình yêu động vật cụ thể là meo meo</p>
+            <p>Mình nghiêm túc với tình yêu và đặc biệt mình rất chung thuỷ, mình tự tin về điều này. Mình hay suy nghĩ nhiều cho nên mình rất muốn được một chút cảm giác an toàn, và mình cũng sẽ làm điều tương tự với người yêu mình.</p>
+            <p>Mình là người khá là chủ động trong tình yêu, mình có thể hy sinh cho người yêu mình một điều gì đó để đổi lại sự an toàn và sự che chở cho người yêu mình</p>
+        </div>
+
+        <div class="info-box" id="love" onclick="toggleInfo('love')">
+            <h2 class="info-title">Mình tìm kiếm một bạn...</h2>
+            <p>Mình đang kiếm một người đồng hành cùng mình hiện tại lẫn tương lai, mình khá là bận rộn nên rất hy vọng cậu thông cảm cho mình, mình thích được quan tâm và thích được tâm sự.</p>
+            <p>Mình vẫn luôn tự tin vào sự tử tế của bản thân mình, nên yêu mình cậu cứ yên tâm nhé ^^</p>
+        </div>
+
+        <div class="info-box" id="interests" onclick="toggleInfo('interests')">
+            <h2 class="info-title">Sở thích của mình</h2>
+            <ul>
+                <li>Ăn ăn và ăn</li>
+                <li>Đi đây đi đó</li>
+                <li>Đi dạo một mình</li>
+                <li>Code và Code </li>
+
+            </ul>
+        </div>
+
+        <div class="info-box" id="education">
+            <h2 class="education-title">Học vấn của mình</h2>
+            <div class="education-box">
+                <p class="degree" style="font-weight: bold; color: #079aef;">Kỹ sư Cao Đẳng Công nghệ Thông tin</p>
+                <p>Trường Cao Đẳng Kỹ Thuật Đồng Nai 2021-2022</p>
+            </div>
+            <div class="education-box">
+                <p class="degree" style="font-weight: bold; color: #079aef;">Kỹ sư Chính quy Công nghệ Thông tin</p>
+                <p>Trường Đại học Sư phạm Kỹ Thuật TP.HCM 2023 - 2026</p>
+            </div>
+        </div>
+
+        <div class="info-box" id="contact" onclick="toggleInfo('contact')">
+            <h2 class="info-title">Liên hệ với mình</h2>
+            <p><i class="fas fa-envelope" style="color: #079aef; margin-right: 10px;"></i>Long.lequang308@gmail.com</p>
+            <p><i class="fas fa-phone" style="color: #079aef; margin-right: 10px;"></i>0969 875 278</p>
+            <p><i class="fas fa-map-marker-alt" style="color: #079aef; margin-right: 10px;"></i>Trảng Dài, Biên Hoà, Đồng Nai</p>
+        </div>
+
+        <div class="info-box" id="socials" onclick="toggleInfo('socials')">
+            <h2 class="info-title">Mạng xã hội</h2>
+            <div class="social-box">
+                <i class="fab fa-facebook-square social-icon"></i>
+                <a href="https://www.facebook.com/Long.lequang308" target="_blank" style="text-decoration: none;">Quang Long</a>
+            </div>
+            <div class="social-box">
+                <i class="fab fa-instagram social-icon"></i>
+                <a href="https://www.instagram.com/Long.lequang308" target="_blank" style="text-decoration: none;">Quang Long</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleInfo(section) {
+            const infoBox = document.getElementById(section);
+            if (infoBox.style.opacity == 1) {
+                infoBox.style.opacity = 0; // Fade out
+                infoBox.style.transform = 'translateY(20px)'; // Slide down
+            } else {
+                infoBox.style.opacity = 1; // Fade in
+                infoBox.style.transform = 'translateY(0)'; // Slide up
+            }
+        }
+
+        // Mouse hover effect for profile image
+        const profileImg = document.querySelector('.profile-img img');
+        profileImg.addEventListener('mouseover', () => {
+            profileImg.style.transform = 'scale(1.1)';
+        });
+        profileImg.addEventListener('mouseout', () => {
+            profileImg.style.transform = 'scale(1)';
+        });
+
+        // Social icon click effect
+        const socialIcons = document.querySelectorAll('.social-icon');
+        socialIcons.forEach(icon => {
+            icon.addEventListener('click', (e) => {
+                e.target.style.transform = 'scale(0.9)';
+                setTimeout(() => {
+                    e.target.style.transform = 'scale(1)';
+                }, 200);
+            });
+        });
+
+        // Add animation for info boxes on load
+        window.onload = () => {
+            const infoBoxes = document.querySelectorAll('.info-box');
+            infoBoxes.forEach((box, index) => {
+                setTimeout(() => {
+                    box.style.opacity = 1;
+                    box.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+        };
+    </script>
+</body>
+</html>
